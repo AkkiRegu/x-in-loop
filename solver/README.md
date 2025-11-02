@@ -1,7 +1,7 @@
 # GPU_vs_CPU_AEB
 
 Copyright of Akshay Karjol and Kedar Rege  
-Created Date
+Created Date - 2 NOV 2025
 
 ## Project Overview
 
@@ -23,25 +23,18 @@ Created Date
 
 ## Installation
 
-[TODO: Add installation instructions]
+Mount the git repo on the local machine which consists of any GPU 
+``` git clone https://github.com/AkkiRegu/x-in-loop.git ```
 
+Checkout the branch neccessary fot this study 
+
+``` git checkout user/krege/AEB-solver ```
 ## Usage
 
-[TODO: Add usage examples]
+[ To Do - @akarjol , Update this once the shell script is running and how to integrate this infra for any use case ]
 
-## Dependencies
-
-[TODO: List dependencies]
-
-## Build Instructions
-
-[TODO: Add build instructions]
-
-## Results
-
-[TODO: Document performance results]
 
 ## License
 
-[TODO: Add license information]
+[Open source development as of NOV 2 2025]
 
