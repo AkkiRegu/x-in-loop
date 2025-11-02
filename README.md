@@ -43,7 +43,7 @@ scalable tool for AI-driven safety validation under uncertainty.
 Mount the git repo on the local machine which consists of any GPU 
 ``` git clone https://github.com/AkkiRegu/x-in-loop.git ```
 
-Checkout the branch neccessary fot this study 
+Checkout the branch neccessary for this study 
 
 ``` git checkout user/krege/AEB-solver ```
 ## Usage
