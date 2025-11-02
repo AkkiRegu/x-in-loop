@@ -5,7 +5,20 @@ Created Date - 2 NOV 2025
 
 ## Project Overview
 
-[TODO: Add project description]
+Abstract: 
+This project aims to develop an AI-guided, GPU-accelerated Monte Carlo framework for
+evaluating the reliability of Automated Braking Systems (ABS) and Autonomous Emergency
+Braking (AEB) technologies. Traditional Monte Carlo simulations for safety validation
+require millions of stochastic driving scenarios to achieve statistical confidence, leading to
+high computational cost. By leveraging parallel GPU computing and AI-based adaptive
+sampling, this project accelerates reliability estimation while maintaining accuracy. A
+lightweight neural sampler learns to focus computation on high-risk, rare-event scenarios,
+reducing the number of samples required for a given confidence interval. The resulting
+system demonstrates dual acceleration — computational (via CUDA kernels) and statistical
+(via AI-guided sampling). Expected outcomes include a 50–200× computational speedup
+over CPU baselines and a 3–10× reduction in sample requirements for equivalent accuracy.
+This framework contributes to the broader field of intelligent vehicle systems, providing a
+scalable tool for AI-driven safety validation under uncertainty.
 
 ## Project Structure
 
