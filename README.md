@@ -23,17 +23,21 @@ scalable tool for AI-driven safety validation under uncertainty.
 ## Project Structure
 
 - **core/** - Core solver mathematics
-  - `stepper.h` - RK/AB/implicit math (header-only, device-agnostic)
-  - `rhs.h` - user RHS functors (no I/O, pure math)
+  - `stepper.hpp` - RK/AB/implicit math (header-only, device-agnostic)
+  - `rhs.hpp` - user RHS functors (no I/O, pure math)
+  - `models.hpp` - brake and vehicle model definitions
+  - `state.hpp` - state and parameter type definitions
 
 - **backends/** - Parallel execution backends
-  - `cpu_backend.h` - parallel_for, reduce via OpenMP/TBB
-  - `gpu_backend.h` - parallel_for, reduce via SYCL/CUDA/HIP
+  - `cpu_backend.hpp` - parallel_for, reduce via OpenMP/TBB
+  - `gpu_backend.hpp` - parallel_for, reduce via SYCL/CUDA/HIP
 
 - **drivers/** - Backend integration drivers
   - `solve_cpu.cpp` - wires core + cpu_backend
   - `solve_gpu.cpp` - wires core + gpu_backend
 
+- **sim/** - simulation apis
+  - `simulation_api.hpp` - Acts as a frontend API to higher level project files
 ## Installation
 
 Mount the git repo on the local machine which consists of any GPU 
