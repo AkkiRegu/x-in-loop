@@ -1,0 +1,11 @@
+build --incompatible_strict_action_env
+build --cxxopt=-std=c++20
+build:dbg --compilation_mode=dbg
+build:opt --compilation_mode=opt --cxxopt=-O3
+
+# Optional CUDA config (if using rules_cuda)
+# build:cuda --@rules_cuda//cuda:enable
+
+# Selectable "backend" define (used by headers to specialize)
+build:cpu --define=backend=cpu
+build:gpu --define=backend=gpu
