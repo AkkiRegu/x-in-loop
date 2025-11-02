@@ -118,9 +118,27 @@ bazel build :main_gpu --config=gpu --config=opt
 
 # 4. Run it
 bazel run :main_gpu --config=gpu
+
+# 5. Run AEB Brake Simulation (30 second CPU simulation)
+bazel run :run_brake_simulation --config=cpu
 ```
 
 ## Usage
+
+### Running the AEB Brake Simulation
+
+The `run_brake_simulation` target executes a 30-second AEB braking simulation using parameters from `params_AEB.json`:
+
+```bash
+# Build and run the simulation
+bazel run :run_brake_simulation --config=cpu
+
+# Or build first, then run
+bazel build :run_brake_simulation --config=cpu --config=opt
+./bazel-bin/solver/drivers/run_brake_simulation
+```
+
+The simulation reads brake parameters, vehicle parameters, and initial conditions from `params_AEB.json`.
 
 ### Basic Build Commands
 

@@ -180,7 +180,27 @@ bazel build :main_gpu --config=gpu --config=opt
 
 # 6. Run the GPU solver
 bazel run :main_gpu --config=gpu
+
+# 7. Run AEB Brake Simulation (30 second simulation)
+bazel run :run_brake_simulation --config=cpu
 ```
+
+## Running the AEB Brake Simulation
+
+The `run_brake_simulation` target executes a 30-second AEB braking scenario:
+
+```bash
+# Build and run the simulation
+bazel run :run_brake_simulation --config=cpu
+
+# Build optimized version
+bazel build :run_brake_simulation --config=cpu --config=opt
+
+# Run from build output
+./bazel-bin/solver/drivers/run_brake_simulation
+```
+
+The simulation reads its configuration from `params_AEB.json` at the project root.
 
 ## Configuration Flags Explained
 

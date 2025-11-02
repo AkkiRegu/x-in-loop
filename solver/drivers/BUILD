@@ -31,3 +31,13 @@ cc_binary(
         "//conditions:default": [],
     }),
 )
+
+cc_binary(
+    name = "run_brake_simulation",
+    srcs = ["run_brake_simulation.cpp"],
+    deps = [
+        "//solver/sim:solverlib",
+        "//solver/backends:cpu_backend",
+    ],
+    data = ["//:params_file"],
+)

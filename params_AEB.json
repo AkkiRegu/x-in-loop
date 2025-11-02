@@ -1,0 +1,25 @@
+{
+  "brake_params": {
+    "wn": 10.0,
+    "zeta": 0.7,
+    "gain": 1.5,
+    "delay_s": 0.1
+  },
+  "vehicle_params": {
+    "mass": 1500.0,
+    "drag": 0.3,
+    "rr": 0.015,
+    "force_delay_s": 0.05
+  },
+  "initial_conditions": {
+    "initial_speed_mps": 27.7778,
+    "initial_position_m": 0.0,
+    "brake_state_x1": 0.0,
+    "brake_state_x2": 0.0
+  },
+  "simulation": {
+    "dt": 0.001,
+    "brake_torque_cmd": 500.0
+  }
+}
+

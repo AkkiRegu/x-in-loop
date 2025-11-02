@@ -20,3 +20,14 @@ alias(
     name = "main_gpu",
     actual = "//solver/drivers:main_gpu",
 )
+
+alias(
+    name = "run_brake_simulation",
+    actual = "//solver/drivers:run_brake_simulation",
+)
+
+filegroup(
+    name = "params_file",
+    srcs = ["params_AEB.json"],
+    visibility = ["//visibility:public"],
+)
